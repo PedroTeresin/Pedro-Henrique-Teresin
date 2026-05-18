@@ -59,8 +59,11 @@ body {
   display: block;
 }
 @media screen and (min-width: 768px) {
+<<<<<<< HEAD
   /* Código omitido */
 
+=======
+>>>>>>> 727fc7f9be0f6144fe7f2d0d7e3e5f57f900beef
   .botao:last-child {
     border-radius: 0 40px 0 0;
   }
