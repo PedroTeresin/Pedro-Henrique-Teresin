@@ -31,7 +31,7 @@ function comecaCronometro() {
   setInterval(atualizaCronometro, 1000);
 }
 
-comecaCronometro();
+//comecaCronometro();
 
 function calculaTempo(tempoObjetivo) {
   let tempoAtual = new Date();
@@ -43,7 +43,7 @@ function calculaTempo(tempoObjetivo) {
  
  segundos %= 60;
 minutos %= 60;
-horas %= 24;Au
+horas %= 24;
 
  if (tempoFinal > 0) {
   return (
