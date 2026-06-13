@@ -21,12 +21,17 @@ const tempoObjetivo4 = new Date("2027-04-20T00:00:00");
 
 const tempos = [tempoObjetivo1, tempoObjetivo2, tempoObjetivo3, tempoObjetivo4];
 
-
-
-for (let i = 0; i < contadores.length; i++) {
-  contadores[i].textContent = calculaTempo(tempos[i]);
+function atualizaCronometro() {
+  for (let i = 0; i < contadores.length; i++) {
+    contadores[i].textContent = calculaTempo(tempos[i]);
+  }
+}
+function comecaCronometro() {
+  atualizaCronometro();
+  setInterval(atualizaCronometro, 1000);
 }
 
+comecaCronometro();
 
 function calculaTempo(tempoObjetivo) {
   let tempoAtual = new Date();
@@ -38,16 +43,20 @@ function calculaTempo(tempoObjetivo) {
  
  segundos %= 60;
 minutos %= 60;
-horas %= 24;
+horas %= 24;Au
 
+ if (tempoFinal > 0) {
   return (
-  dias +
-  " dias " +
-  horas +
-  " horas " +
-  minutos +
-  " minutos " +
-  segundos +
-  " segundos"
-);
+    dias +
+    " dias " +
+    horas +
+    " horas " +
+    minutos +
+    " minutos " +
+    segundos +
+    " segundos"
+  );
+} else {
+  return "Prazo Finalizado";
+}
 }
